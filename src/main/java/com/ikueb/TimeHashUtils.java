@@ -62,31 +62,36 @@ public final class TimeHashUtils {
      * <td>40 Hz</td>
      * <td>40x</td>
      * <td>7</td>
-     * </tr><tr>
+     * </tr>
+     * <tr>
      * <td>{@link #MILLIS}</td>
      * <td>1 ms</td>
      * <td>1 KHz</td>
      * <td>25x</td>
      * <td>8</td>
-     * </tr><tr>
+     * </tr>
+     * <tr>
      * <td>{@link #MICROGROUP}</td>
      * <td>10 μs</td>
      * <td>100 KHz</td>
      * <td>100x</td>
      * <td>9</td>
-     * </tr><tr>
+     * </tr>
+     * <tr>
      * <td>{@link #NANOGROUP}</td>
      * <td>200 ns</td>
      * <td>5 MHz</td>
      * <td>50x</td>
      * <td>10</td>
-     * </tr><tr>
+     * </tr>
+     * <tr>
      * <td>{@link #QUADNANO}</td>
      * <td>4 ns</td>
      * <td>250 MHz</td>
      * <td>50 x</td>
      * <td>11</td>
-     * </tr><tr>
+     * </tr>
+     * <tr>
      * <td>{@link #NANOS}</td>
      * <td>1 ns</td>
      * <td>1 GHz</td>
