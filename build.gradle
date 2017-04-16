@@ -3,6 +3,7 @@ version '0.1-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'idea'
+apply plugin: 'jacoco'
 
 sourceCompatibility = 1.8
 
@@ -17,4 +18,11 @@ dependencies {
 
 test {
     useTestNG()
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        html.enabled false
+    }
 }
