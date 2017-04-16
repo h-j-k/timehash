@@ -1,5 +1,8 @@
 # TimeHash
 
+ [![Build Status](https://travis-ci.org/h-j-k/timehash.svg?branch=master)](https://travis-ci.org/h-j-k/timehash) [Javadocs](https://h-j-k.github.io/timehash/apidocs)
+
+
 A simple utility class for hashing [`LocalDateTime`][1] values.
 
 # Motivation
@@ -68,7 +71,7 @@ A simple utility class for hashing [`LocalDateTime`][1] values.
             <td><code>QUADNANO</code></td>
             <td>4 ns</td>
             <td>250 MHz</td>
-            <td>50 x</td>
+            <td>50x</td>
             <td>11</td>
             <td><code>7569sQnCdML</code></td>
             <td><code>2017-01-02T03:45:06.789012344</code></td>

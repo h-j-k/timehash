@@ -103,7 +103,7 @@ public final class TimeHashUtils {
      * <td>{@link #QUADNANO}</td>
      * <td>4 ns</td>
      * <td>250 MHz</td>
-     * <td>50 x</td>
+     * <td>50x</td>
      * <td>11</td>
      * </tr>
      * <tr>

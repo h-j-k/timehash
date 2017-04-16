@@ -1,10 +1,15 @@
 language: java
 jdk:
-  - oraclejdk8
+- oraclejdk8
 before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
+env:
+  global:
+    secure: wBR2lemm67QalSohQhu8L06Tt42tfRdQRII3rwqMwMFhbDpcxy6ax9QiJzSWg0VTub5mEI2KKBGcfjT3QXv4YbUoHqUU8tU5HK/fA6z2jTl6+owYYVsFdaZTOGwT3Yl+1b+CP59gyb1EIszLgsz3aHcqyRbYSnonf8pfNNJ9hf+y0Ufe9+TZVkwKhzTPVA9ZeYpAktqjReUZzl1Ti1K5FxLpy/h83J1IjoTG6cbHf1fGFoS54VSLtIJ/67Z9qzrufwJh5PH3tglH6zolhjzbcP4MFW3uHCiq32FCGe4yaT2yvYYK67+gh9QoLpyJ0hDi3ri5F7XGG8EgVULo+ilVB/R4Kpebxt0+nfcX0Y3LguWSKp6qFtaJJ9pRdQBa4PJ0XFU9sBnxRHdv+rd0A5CseKEPJ21MsMRUwU9Rtl5El9aR3X+LDsIB4FPrEEyzJTo62fxYcvfm/fVBE3AKigmRTUVHfNh2Z0KuxRrU5Fq9g0zw3cfKsRCTuYrUhnzkVG8VV3nQpmT7SanOjjDE1KbTM+HC5ltAnBr5qPaVwPPNJEjy88niPjcaR94ZSmF7t5c7d5c/pdVnJI/xJQF+ePZ0l/hkfOW3lTtPEwCJg3rYPBLc1tpBjXL3B2OeewyFtrZe1io5+2fydDuTfJjqWZ2Am5V7IIIvD+f/Ud9YN4s6zJg=
+after_success:
+- chmod +x .travis-scripts/javadoc.sh && $_
