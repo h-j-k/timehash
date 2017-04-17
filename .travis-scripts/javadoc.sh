@@ -5,7 +5,7 @@ lgm() { date "+%c%t$1"; }
 myid=${TRAVIS_REPO_SLUG%/*}
 myproj=${TRAVIS_REPO_SLUG##*/}
 jdb=gh-pages
-websrc=$TRAVIS_BUILD_DIR/target/site/apidocs
+websrc=$TRAVIS_BUILD_DIR/build/docs
 webtgt=$(mktemp -d)
 [ -z "$webtgt" ] && lgm "Error creating tmp dir, bailing." && exit 1
 gradle javadoc
