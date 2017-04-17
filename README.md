@@ -1,7 +1,8 @@
 # TimeHash
 
- [![Build Status](https://travis-ci.org/h-j-k/timehash.svg?branch=master)](https://travis-ci.org/h-j-k/timehash) [Javadocs](https://h-j-k.github.io/timehash/apidocs)
-
+[![Build Status](https://travis-ci.org/h-j-k/timehash.svg?branch=master)](https://travis-ci.org/h-j-k/timehash) 
+[![codecov](https://codecov.io/gh/h-j-k/timehash/branch/master/graph/badge.svg)](https://codecov.io/gh/h-j-k/timehash)
+[Javadocs](https://h-j-k.github.io/timehash/javadoc)
 
 A simple utility class for hashing [`LocalDateTime`][1] values.
 
