@@ -265,29 +265,12 @@ public final class TimeHashUtils {
     }
 
     /**
-     * Hashes the date-time with an appropriate precision given the following rule:
-     * <table summary="Precision derivation">
-     * <thead>
-     * <tr>
-     * <td>Nanoseconds</td>
-     * <td>{@link SubSecond SubSecond} value</td>
-     * </tr>
-     * </thead>
-     * <tbody>
-     * <tr>
-     * <td>0</td>
-     * <td>{@link SubSecond#TRIM TRIM}</td>
-     * </tr>
-     * <tr>
-     * <td>Multiple of 1,000,000</td>
-     * <td>{@link SubSecond#MILLIS MILLIS}</td>
-     * </tr>
-     * <tr>
-     * <td>All other cases</td>
-     * <td>{@link SubSecond#NANOS NANOS}</td>
-     * </tr>
-     * </tbody>
-     * </table>
+     * Hashes the date-time with an appropriate precision given the following pseudo-code:
+     * <ol>
+     * <li>If sub-seconds value = 0, Then use {@link SubSecond#TRIM TRIM}.</li>
+     * <li>If sub-seconds is multiple of 1,000,000, Then use {@link SubSecond#MILLIS MILLIS}.</li>
+     * <li>Else use {@link SubSecond#NANOS NANOS}.</li>
+     * </ol>
      *
      * @param value the date-time to hash
      * @return hashed value of the date-time with an appropriate precision

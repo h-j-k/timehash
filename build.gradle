@@ -26,3 +26,8 @@ jacocoTestReport {
         html.enabled false
     }
 }
+
+task generateJavadoc(type: Javadoc) {
+    source = project.sourceSets.main.allJava
+    options.showFromPrivate()
+}
