@@ -174,7 +174,7 @@ public final class TimeHashUtils {
          */
         SubSecond(int length, TemporalField field, int multiplier) {
             this(v -> v.get(field), v -> toHash(v / multiplier, length), asPattern(length),
-                    (v, t) -> t.with(field, multiplier * parse(v)));
+                    (v, t) -> t.with(field, (long) multiplier * parse(v)));
         }
 
         /**
@@ -281,7 +281,7 @@ public final class TimeHashUtils {
         int subSecond = value.getNano();
         if (subSecond == 0) {
             return hash(value, SubSecond.TRIM);
-        } else if (subSecond % 1e6 == 0) {
+        } else if (subSecond % 1_000_000 == 0) {
             return hash(value, SubSecond.MILLIS);
         }
         return hash(value, SubSecond.NANOS);
