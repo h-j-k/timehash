@@ -1,3 +1,7 @@
+dist: trusty
+addons:
+  sonarqube:
+    organization: "h-j-k-github"
 language: java
 jdk:
 - oraclejdk8
@@ -17,7 +21,4 @@ deploy:
     branch: master
 after_success:
 - gradle generateJavadoc && cp "$TRAVIS_BUILD_DIR/README.md" "$TRAVIS_BUILD_DIR/build/docs"
-- gradle jacocoTestReport && bash <(curl -s https://codecov.io/bash)
-env:
-  global:
-    secure: vR1AXQbkkQ+rJx5gYEIzQ1DgdXKUauz6NdDnfsoV9UhtaB1Am/g39ET3T3yeDUxgGjwY5yOwUPZrknvVyMEWyBqU0Vs4m7CsZ6aAWA2wsU7EyzIWxBIRi78P9+MmY4AMGSxqGJJPYg0li0kOsLJvyDmDDQEuPWWpQLcAdR9FBvxY6+LZMfpFprrVlnB7QIny7e8rW/ukbs5p9VW/NznbF8pWqsZijNAZ0CPwK6VGdzPX2nYM3GSE90y23gcKiFM6EWLdvIsDPtChQOGxckW94dImqBpOOqoWPQEN9NFGlPg+8o2oOfD+c+egzyz1EK+5+U61Yr8o4DioFfeG9nc4kOgrXzCp0lJXyqHiYL03UT76aBmseyOnR539EaBGpUKFAN1I3D6+E1egV4+1DNwUsBzw0POM1+CXqNCyxQpoIshzU+GUVAhZipB0muy58C9+/Boeu2RcFmR8TEO00iyb414ivRTUXJtLumEQUUYgVdBQSRIMKZm6YUSjB7yogmcGIkeay6GC19vi5ziSNvt32nCWiTTLbNOW0FEkw1bLz6+RKTat0uQ7etNzwIHK+vp1b1qvg7Hi33Xx3TIDTlVHrArift9NzuswI7bMAbScUidifjEuhuPGkDGKg2UhwKy7l8ujee8laa37gwf362s59Oh9NeSstRTPoPqjd3u7SlA=
+- gradle jacocoTestReport sonarqube && bash <(curl -s https://codecov.io/bash)
