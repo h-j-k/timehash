@@ -2,8 +2,13 @@
 
 [![Build Status](https://travis-ci.org/h-j-k/timehash.svg?branch=master)](https://travis-ci.org/h-j-k/timehash) 
 [![codecov](https://codecov.io/gh/h-j-k/timehash/branch/master/graph/badge.svg)](https://codecov.io/gh/h-j-k/timehash)
+[![Quality Gate](https://sonarqube.com/api/badges/gate?key=com.ikueb:timehash)](https://sonarqube.com/dashboard/?id=com.ikueb:timehash)
+[![Technical Debt Ratio](https://sonarqube.com/api/badges/measure?key=com.ikueb:timehash&metric=sqale_debt_ratio)](https://sonarqube.com/dashboard/?id=com.ikueb:timehash)
+[![Comments](https://sonarqube.com/api/badges/measure?key=com.ikueb:timehash&metric=comment_lines_density)](https://sonarqube.com/dashboard/?id=com.ikueb:timehash)
 
 A simple utility class for hashing [`LocalDateTime`][1] values.
+
+[Homepage](https://h-j-k.github.io/timehash)
 
 [GitHub project page](https://github.com/h-j-k/timehash)
 
